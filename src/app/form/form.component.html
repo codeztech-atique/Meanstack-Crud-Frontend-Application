@@ -1,0 +1,47 @@
+<div class="main">
+    <form name="form" action="" #personForm="ngForm" (ngSubmit)="onSubmit(personForm)">
+       <div class="container">
+        <input name="_id" type="hidden" #_id="ngModel" [(ngModel)]="personService.selectedPerson._id">
+        <div class="input-field col s12">
+            <input id="name" name="name" #name="ngModel" [(ngModel)]="personService.selectedPerson.name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+         <div class="input-field col s12">
+            <input id="email" name="mail" #name="ngModel" [(ngModel)]="personService.selectedPerson.mail" type="email" class="validate">
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="Invalid Mail" data-success="right">Enter Valid Mail</span>
+          </div>
+          <mat-form-field>
+              <mat-select name="class" #name="ngModel" [(ngModel)]="personService.selectedPerson.class" placeholder="Class">
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+                <mat-option value="5">5</mat-option>
+                <mat-option value="6">6</mat-option>
+                <mat-option value="7">7</mat-option>
+                <mat-option value="8">8</mat-option>
+                <mat-option value="9">9</mat-option>
+                <mat-option value="10">10</mat-option>
+                <mat-option value="11">11</mat-option>
+                <mat-option value="12">12</mat-option>
+              </mat-select>
+            </mat-form-field> 
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>      
+          </div>
+        </form>
+        <div *ngFor="let per of personService.persons" style="text-align: center">
+          
+          <div class="row">
+            <div class="col s12 m5" style="margin: 5px auto;">
+              <div class="card-panel teal">
+                <span class="white-text" style="font-weight: bold;">
+                    {{ per.name }} <br> {{ per.mail }} <br> {{ per.class }} <a (click)="onDelete(per._id,personForm)"> <i class="material-icons" style="color: white;cursor: pointer;float: right">delete</i></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
