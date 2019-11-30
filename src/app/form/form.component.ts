@@ -92,7 +92,7 @@ export class FormComponent implements OnInit {
         this.refreshPersonList();
       });
     } 
-    // window.location.reload();
+    window.location.reload();
   }
   isSticky(column: string) {
     return this.stickyColumns.find(val => val === column) !== undefined
@@ -122,13 +122,7 @@ export class FormComponent implements OnInit {
     this.mail = element.email;
     this.class = element.class;
     this.name = element.name;
-    var userData = {
-      "_id": element._id,
-      "class": element.class,
-      "mail": element.email,
-      "name":element.name
-    };
-    console.log(this._id, this.mail, this.class, this.name);
+   
     // $("label[for='name']").toggleClass('active');
     // $("label[for='email']").toggleClass('active');
     $("label[for='email']").css('display', 'none');
