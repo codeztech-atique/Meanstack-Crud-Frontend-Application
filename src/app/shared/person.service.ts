@@ -14,6 +14,10 @@ export class PersonService {
 
   constructor( private http : HttpClient) { }
 
+  updatePerson(_id:string, person : Person) {
+    return this.http.put(this.baseURL + `/${_id}`, person);
+  }
+  
   postPerson(person : Person){
     return this.http.post(this.baseURL,person)
   }

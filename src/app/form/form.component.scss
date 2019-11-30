@@ -1,0 +1,257 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    width: 40%;
+    padding: 3%;
+    margin: 3% auto;
+  }
+
+  // Table
+  #Nodatafound {
+    color: #c30000;
+  }
+  
+  
+  .action-icon {
+    font-size: 15px;
+  }
+  
+  .actionAnc {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .editcol {
+    position: absolute;
+    width: 5vh !important;
+    top: 19% !important;
+    // left: 38%;
+  }
+  
+  
+  
+  .mat-cell:nth-child(2),
+  .mat-header-cell:nth-child(2){
+   flex: 0 0 75px !important;
+  }
+  
+  td.mat-cell:first-child,
+  td.mat-footer-cell:first-child,
+  th.mat-header-cell:first-child {
+    padding-left: 15px;
+  }
+  
+  .mat-header-cell:nth-child(2),.mat-cell:nth-child(2){
+    flex:10%;
+  }
+  
+  
+  td.mat-cell:last-child,
+  td.mat-footer-cell:last-child,
+  th.mat-header-cell:last-child {
+    padding-right: 0px;
+  }
+  
+  .tableHeaderEdit {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    flex: 0 0 25px !important;
+    top: 0px;
+    left: 0px;
+  }
+  
+  td.mat-cell {
+    white-space: nowrap;
+    padding: 0px 40px !important;
+  }
+  
+  table.mat-table {
+    // margin-left: 1.5%;
+    width: 100%;
+    // margin-top: 0.5%;
+  }
+  
+  tr.mat-row {
+    height: 30px;
+  }
+  
+  tr.mat-header-row {
+    height: 35px;
+  }
+  
+  // atique
+  mat-cell {
+    display: flex !important;
+    justify-content: center !important;
+    // border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  
+  td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    padding: 0px 40px !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  
+  // atique
+  
+  
+  td.mat-cell {
+    border-right: 0.1px solid rgba(0, 0, 0, 0.2);
+    padding-right: 20px !important;
+  }
+  
+  mat-header-cell {
+    display: flex;
+    justify-content: center;
+  }
+  
+  td.mat-cell:first-child,
+  td.mat-footer-cell:first-child,
+  th.mat-header-cell:first-child {
+    padding-left: 15px;
+  }
+  
+  
+  td.mat-cell:last-child,
+  td.mat-footer-cell:last-child,
+  th.mat-header-cell:last-child {
+    padding-right: 0px;
+  }
+  
+  .tableHeaderEdit {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    left: 0px !important;
+  }
+  .tool-tip {
+    color: yellow !important;
+  }
+  
+  td.mat-cell {
+    white-space: nowrap;
+    padding: 0px 40px;
+  }
+  
+
+  .mat-cell.cdk-column-delete.mat-column-delete.mat-table-sticky.ng-star-inserted {
+    left: 0px !important;
+    position: sticky !important;
+    z-index: 1 !important;
+  }
+  /* Customize website's scrollbar like Mac OS
+  Not supports in Firefox and IE */
+  
+  /* total width */
+  #table::-webkit-scrollbar {
+    background-color: #fff;
+    width: 13px;
+  }
+  
+  /* background of the scrollbar except button or resizer */
+  #table::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+  #table::-webkit-scrollbar-track:hover {
+    background-color: #fff;
+  }
+  
+  /* scrollbar itself */
+  #table::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+  }
+  #table::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+    border: 4px solid #fff;
+  }
+  
+  /* set button(top and bottom of the scrollbar) */
+  #table::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  #table {
+    height: calc(100vh - 515px) !important;
+    overflow: auto;
+  }
+  
+  // Overlay
+  // #overlaytext {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   font-size: 50px;
+  //   color: white;
+  //   transform: translate(-50%,-50%);
+  //   -ms-transform: translate(-50%,-50%);
+  // }
+  
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+    cursor: pointer;
+  }
+  
+  
+  #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #144779 !important;
+    color: white;
+  }
+  
+  .close {
+    position: absolute;
+    right: 0px ;
+    top: 0px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    background-color: white;
+    border-radius: 35%;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
