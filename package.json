@@ -27,7 +27,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.2.17",
     "npm": "^6.4.1",
-    "rxjs": "6.0.0",
+    "rxjs": "6.5.4",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
