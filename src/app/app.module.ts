@@ -1,16 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormComponent } from './form/form.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
+import { provideHttpClient } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import {MatTableModule} from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+
+import { AppComponent } from './app.component';
+import { FormComponent } from './form/form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,30 +19,18 @@ import { MatPaginatorModule } from '@angular/material';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
+    ReactiveFormsModule,
     MatButtonModule,
-    FormsModule,
-    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatPaginatorModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MatFormFieldModule,
     MatSelectModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    ReactiveFormsModule
+    MatTableModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

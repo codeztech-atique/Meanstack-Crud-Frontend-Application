@@ -1,6 +1,6 @@
 export class Person {
-    _id : string;
-    name : string;
-    mail : string;
-    class : string;
+    _id = '';
+    name = '';
+    mail = '';
+    class = '';
 }
